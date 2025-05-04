@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		D51B44E32DC496B7000DDA08 /* LibWhisper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51B44E02DC496B7000DDA08 /* LibWhisper.swift */; };
+		D51B44E92DC4972F000DDA08 /* whisper in Frameworks */ = {isa = PBXBuildFile; productRef = D51B44E82DC4972F000DDA08 /* whisper */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		D51B44BE2DC49629000DDA08 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,6 +32,8 @@
 		D51B44AF2DC49627000DDA08 /* WhisperTranscribe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhisperTranscribe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D51B44BD2DC49629000DDA08 /* WhisperTranscribeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhisperTranscribeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D51B44C72DC49629000DDA08 /* WhisperTranscribeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhisperTranscribeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D51B44E02DC496B7000DDA08 /* LibWhisper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibWhisper.swift; sourceTree = "<group>"; };
+		D51B44E62DC49724000DDA08 /* whisper 2.cpp */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = "whisper 2.cpp"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -52,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D51B44E92DC4972F000DDA08 /* whisper in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +87,9 @@
 				D51B44C02DC49629000DDA08 /* WhisperTranscribeTests */,
 				D51B44CA2DC49629000DDA08 /* WhisperTranscribeUITests */,
 				D51B44B02DC49627000DDA08 /* Products */,
+				D51B44E12DC496B7000DDA08 /* whisper.cpp.swift */,
+				D51B44E62DC49724000DDA08 /* whisper 2.cpp */,
+				D51B44E72DC4972F000DDA08 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -90,6 +101,21 @@
 				D51B44C72DC49629000DDA08 /* WhisperTranscribeUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		D51B44E12DC496B7000DDA08 /* whisper.cpp.swift */ = {
+			isa = PBXGroup;
+			children = (
+				D51B44E02DC496B7000DDA08 /* LibWhisper.swift */,
+			);
+			path = whisper.cpp.swift;
+			sourceTree = "<group>";
+		};
+		D51B44E72DC4972F000DDA08 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -112,6 +138,7 @@
 			);
 			name = WhisperTranscribe;
 			packageProductDependencies = (
+				D51B44E82DC4972F000DDA08 /* whisper */,
 			);
 			productName = WhisperTranscribe;
 			productReference = D51B44AF2DC49627000DDA08 /* WhisperTranscribe.app */;
@@ -236,6 +263,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D51B44E32DC496B7000DDA08 /* LibWhisper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,6 +431,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Need this for to take the live audio input from user.";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -430,6 +459,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Need this for to take the live audio input from user.";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -551,6 +581,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D51B44E82DC4972F000DDA08 /* whisper */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = whisper;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D51B44A72DC49627000DDA08 /* Project object */;
 }

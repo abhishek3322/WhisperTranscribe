@@ -6,12 +6,25 @@
 //
 
 import SwiftUI
+import AVFoundation
 
 @main
 struct WhisperTranscribeApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
+  @StateObject private var appState = AppState()
+  
+  var body: some Scene {
+    WindowGroup {
+      if appState.hasPermission {
+        ContentView()
+          .environmentObject(appState)
+      } else {
+        PermissionView()
+          .environmentObject(appState)
+      }
     }
+  }
+}
+
+class AppState: ObservableObject {
+    @Published var hasPermission = (AVCaptureDevice.authorizationStatus(for: .audio) == .authorized)
 }
