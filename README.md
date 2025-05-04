@@ -15,9 +15,5 @@
   MVVM architecture
   Whisper (via Whisper.cpp or other integration)
 
-🛠️ Installation
-  git clone https://github.com/yourusername/transcriber.git
-  cd transcriber
-  open Transcriber.xcodeproj
 📄 License
   MIT License
